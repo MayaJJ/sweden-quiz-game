@@ -86,7 +86,9 @@ No errors were returned when passing through the official (Jigsaw) validator.
 ### Accesibility
 By running accessibility test trough Lighthouse in devtools I confirmed that the colors and fonts chosen are easy to read and accessible.
 
-[accesibilty image](assets/images/accessibility.jpg)
+![accesibilty image](assets/images/accessibility.jpg)
+
+
 
 ### Unfixed Bugs
 No bugs to fix
