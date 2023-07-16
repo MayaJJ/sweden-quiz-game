@@ -29,7 +29,7 @@ The app is built with a responsive design, ensuring that it works well on differ
 
 The footer section of Sweden Quiz website incorporates links to the relevant social media sites, ensuring easy access to stay connected but also to get in touch if they shpuld have any questions or ideas. These links are designed to open in new tabs, providing seamless navigation for users without interrupting their browsing experience.
 
-<img src="/assets/images/footer.jpg" alt="footer image"
+![footer image](assets/images/footer.jpg)
 
 
 The footer section holds value for users as it encourages them to maintain a connection with Sweden Quiz through social media. By providing links to various social media platforms, users are motivated to engage, follow, and stay updated with the latest news, and updates related to Sweden Quiz.
@@ -86,7 +86,7 @@ No errors were returned when passing through the official (Jigsaw) validator.
 ### Accesibility
 By running accessibility test trough Lighthouse in devtools I confirmed that the colors and fonts chosen are easy to read and accessible.
 
-<img src="/assets/images/accessibility.jpg" alt="accessibility image"
+[accesibilty image](assets/images/accessibility.jpg)
 
 ### Unfixed Bugs
 No bugs to fix
