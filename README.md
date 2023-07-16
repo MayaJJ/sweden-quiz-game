@@ -22,7 +22,7 @@ The app features an interactive interface that allows you to navigate through th
 
 The app is built with a responsive design, ensuring that it works well on different devices and screen sizes. Whether you're using a desktop computer, laptop, tablet, or smartphone, you can enjoy the quiz seamlessly. 
 
-! [Responsiv](assets/images/responsiv.jpg)
+![responsiv image](assets/images/responsiv.jpg)
 
 
 ### Footer
