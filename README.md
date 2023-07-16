@@ -97,16 +97,16 @@ No bugs to fix
 The site was deployed to GitHub pages. The steps to deploy are as follows:
 In the GitHub repository, navigate to the settings tab.
 From the source section drop-down menu, select the master Branch.
-Once the master branch has been selected, the page provided the link to the completed website.![The link to the page can be found here](https://mayajj.github.io/quizgame/)
+Once the master branch has been selected, the page provided the link to the completed website [Sweden Quiz](https://mayajj.github.io/quizgame/)
 
 ## Credits:
 
 
 
 ### Content
-! [The layout of the site was inspired by](https://codingartistweb.com/2022/06/quiz-app-with-javascript/)
-! [Parts of the code was taken from aswell](https://codingartistweb.com/2022/06/quiz-app-with-javascript/)
-! [Styling/code of the countdown clock on the website and the high score was taken from](https://miker94.github.io/CI-Project-Portfolio-2/) [Questions for the Quiz Game where taken from](https://www.swedishnomad.com/sweden-quiz/)
+The layout was inspired by [Codingartist](https://codingartistweb.com/2022/06/quiz-app-with-javascript/)
+Parts of the code was taken from [Codingartist](https://codingartistweb.com/2022/06/quiz-app-with-javascript/)
+Styling the countdown clock on the website and the high  score was taken from[Astronomi Quiz](https://miker94.github.io/CI-Project-Portfolio-2/) Questions for the Quiz Game where taken from here [Swedish Normad](https://www.swedishnomad.com/sweden-quiz/)
 
 
 
