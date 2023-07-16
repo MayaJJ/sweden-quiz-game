@@ -22,7 +22,7 @@ The app features an interactive interface that allows you to navigate through th
 
 The app is built with a responsive design, ensuring that it works well on different devices and screen sizes. Whether you're using a desktop computer, laptop, tablet, or smartphone, you can enjoy the quiz seamlessly. 
 
-<img src="/assets/images/responsiv.jpg" alt="responsiv image"
+! [Responsiv](assets/images/responsiv.jpg)
 
 
 ### Footer
@@ -108,7 +108,7 @@ Once the master branch has been selected, the page provided the link to the comp
 
 
 
-
+[]
 
 
 
