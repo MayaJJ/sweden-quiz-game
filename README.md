@@ -91,14 +91,17 @@ No bugs to fix
 ## Deployment
 The site was deployed to GitHub pages. The steps to deploy are as follows:
 In the GitHub repository, navigate to the settings tab.
-From the source section drop-down menu, select the main Branch.
-Once the main branch has been selected, the page provided the link to the completed website. The link to the page can be found here – https://mayajj.github.io/Project-1-Yoga/
+From the source section drop-down menu, select the master Branch.
+Once the master branch has been selected, the page provided the link to the completed website. The link to the page can be found here – https://mayajj.github.io/Project-1-Yoga/
 
 ## Credits:
 
 
 
 ### Content
+The layout of the site was inspired by https://codingartistweb.com/2022/06/quiz-app-with-javascript/
+Parts of the code was taken from aswell https://codingartistweb.com/2022/06/quiz-app-with-javascript/
+Styling/code of the countdown clock on the website and the high score was taken from https://miker94.github.io/CI-Project-Portfolio-2/
 
 
 
