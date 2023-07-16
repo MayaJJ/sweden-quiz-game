@@ -20,18 +20,17 @@ The app features an interactive interface that allows you to navigate through th
 
 ### Responsive Design
 
-The app is built with a responsive design, ensuring that it works well on different devices and screen sizes. Whether you're using a desktop computer, laptop, tablet, or smartphone, you can enjoy the quiz seamlessly.
+The app is built with a responsive design, ensuring that it works well on different devices and screen sizes. Whether you're using a desktop computer, laptop, tablet, or smartphone, you can enjoy the quiz seamlessly. 
 
-### Contact
-
-The Contact Us section serves as a convenient and accessible means for website users to reach out to Love Running. It provides a designated space where users can submit their inquiries, feedback, or any questions they may have, allowing for direct communication YogEaze.
-
-The Contact Us section is designed to enhance user experience by fostering a sense of trust and reliability. By providing clear contact information and a responsive communication channel, it assures users that their concerns will be heard and addressed promptly, strengthening the relationship between Sweden Quiz and its users.
+! [Image showing sites responsivness to diffrent devices](assets/images/responsiv.jpg)
 
 
 ### Footer
 
-The footer section of Sweden Quiz website incorporates links to the relevant social media sites, ensuring easy access to stay connected. These links are designed to open in new tabs, providing seamless navigation for users without interrupting their browsing experience.
+The footer section of Sweden Quiz website incorporates links to the relevant social media sites, ensuring easy access to stay connected but also to get in touch if they shpuld have any questions or ideas. These links are designed to open in new tabs, providing seamless navigation for users without interrupting their browsing experience.
+
+! [Image displaying the footer section of the site](assets/images/footer.jpg)
+
 
 The footer section holds value for users as it encourages them to maintain a connection with Sweden Quiz through social media. By providing links to various social media platforms, users are motivated to engage, follow, and stay updated with the latest news, and updates related to Sweden Quiz.
 
@@ -67,6 +66,8 @@ Leaderboard: Introduce a leaderboard to display the highest scores achieved by u
 
 Categories: Expand the quiz by adding different categories related to Sweden, such as history, geography, culture, and more. Users will have the option to select their preferred category.
 
+Add a contact section so user can get in touch with their thoughts, ideas, questions etc. For now the socialmedia section will serve as the way of getting in touch.
+
 ## Testing
 
 I have conducted comprehensive testing on all the features of the site to ensure its smooth functionality, providing a convincing demonstration that the site works well. Throughout the testing process, I have assessed each feature, verifying that they perform as intended. Users can confidently relay on the website to achieve their desired objectives in an easy and straightforward manner.
@@ -85,6 +86,8 @@ No errors were returned when passing through the official (Jigsaw) validator.
 ### Accesibility
 By running accessibility test trough Lighthouse in devtools I confirmed that the colors and fonts chosen are easy to read and accessible.
 
+[image showing the sites accessibilty](assets/images/accessibility.jpg)
+
 ### Unfixed Bugs
 No bugs to fix
 
@@ -92,20 +95,21 @@ No bugs to fix
 The site was deployed to GitHub pages. The steps to deploy are as follows:
 In the GitHub repository, navigate to the settings tab.
 From the source section drop-down menu, select the master Branch.
-Once the master branch has been selected, the page provided the link to the completed website. The link to the page can be found here – https://mayajj.github.io/Project-1-Yoga/
+Once the master branch has been selected, the page provided the link to the completed website. [The link to the page can be found here](https://mayajj.github.io/quizgame/)
 
 ## Credits:
 
 
 
 ### Content
-The layout of the site was inspired by https://codingartistweb.com/2022/06/quiz-app-with-javascript/
-Parts of the code was taken from aswell https://codingartistweb.com/2022/06/quiz-app-with-javascript/
-Styling/code of the countdown clock on the website and the high score was taken from https://miker94.github.io/CI-Project-Portfolio-2/
+[The layout of the site was inspired by](https://codingartistweb.com/2022/06/quiz-app-with-javascript/)
+[Parts of the code was taken from aswell](https://codingartistweb.com/2022/06/quiz-app-with-javascript/)
+[Styling/code of the countdown clock on the website and the high score was taken from](https://miker94.github.io/CI-Project-Portfolio-2/) [Questions for the Quiz Game where taken from](https://www.swedishnomad.com/sweden-quiz/)
 
 
 
-### Media
+
+
 
 
 
