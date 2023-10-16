@@ -148,6 +148,7 @@ textarea:hover {
 }
 
 .play {
+  text-decoration: none;
   padding: 5px 15px;
   border: unset;
   border-radius: 15px;
@@ -197,6 +198,9 @@ textarea:hover {
 
 #external {
   margin-top: 45px;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
 }
 
 .scores {
@@ -205,19 +209,10 @@ textarea:hover {
   align-items: center;
 }
 
-.points {
-  text-align: center;
-  width: 85%;
-}
-
 .icon {
   width: 15%;
 
   font-size: 2rem;
-}
-
-#leaderboard {
-  width: 40%;
 }
 
 @media (max-width: 450px) {
@@ -365,14 +360,19 @@ textarea:hover {
 }
 
 .closeScore {
-  position: absolute;
   color: #000000;
-  top: 40px;
-  right: 50px;
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px 20px 0 0;
   font-size: 30px;
   cursor: pointer;
 }
-
+@media only screen and (max-width: 768px) {
+  .high-score-modal {
+    padding: 0;
+    width: 70%;
+  }
+}
 #contactModal {
   display: none;
   background: #c0bfd2;
@@ -405,5 +405,32 @@ textarea:hover {
 
 .stopwatch-img {
   width: 22px !important;
+}
+#email-success-alert {
+  background-color: white;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  z-index: 1000;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+}
+#email-success-alert span {
+  text-align: right;
+}
+#email-success-alert .message {
+  color: rgb(30, 156, 30);
+}
+#usernameErr {
+  color: red;
+  margin-top: 16px;
+}
+.right {
+  display: flex;
+  gap: 16px;
+  align-items: center;
 }
 
