@@ -97,7 +97,7 @@ No bugs to fix
 The site was deployed to GitHub pages. The steps to deploy are as follows:
 In the GitHub repository, navigate to the settings tab.
 From the source section drop-down menu, select the master Branch.
-Once the master branch has been selected, the page provided the link to the completed website [Sweden Quiz](https://mayajj.github.io/quizgame/)
+Once the master branch has been selected, the page provided the link to the completed website [Sweden Quiz Game](https://mayajj.github.io/quizgame/)
 
 ## Credits:
 
