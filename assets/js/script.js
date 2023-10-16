@@ -95,7 +95,7 @@ const quizArray = [
       "No peets allowed indoors",
       "No eating infront of the TV",
     ],
-    correct: "Take your shoes off indoors",
+    correct: "Take your shoes of indoors",
   },
   {
     id: "9",
