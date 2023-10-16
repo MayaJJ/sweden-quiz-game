@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -7,122 +8,68 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
-
-    <title>Sweden Quiz Game</title>
+    <title>Quiz App using JavaScript - @code.scientist x @codingtorque</title>
 </head>
 
 <body>
-
-
     <div id="start-display-container">
         <h3>Write your name and start the game.</h3>
-        <input class="input" type="text" id="userName" placeholder="enter username">
-        <button id="play-button" class="play" onclick="updateHref()">play</button>
+        <input class="input" type="text" required id="userName" placeholder="enter username">
+        <div id="usernameErr" style="display: none;"></div>
+        <button id="play-button" type="submit" class="play" onclick="updateHref()">play</button>
     </div>
 
     <div id="top">Sweden Quiz 🇸🇪</div>
     <!-- Further code here -->
     <div class="start-screen">
         <button id="start-button">Start</button>
-
     </div>
-    <div id="display-container">
+
+    <main id="display-container">
         <div id="hiUser"></div>
-        <div class="header">
+        <header class="header">
             <div class="number-of-count">
                 <span class="number-of-question">1 of 3 questions</span>
             </div>
-            <div class="timer-div">
-                <img src="assets/images/stopwatch.svg" alt="Stopwatch">
-                <span class="time-left">10s</span>
+            <div class="right">
+                <div id="score"></div>
+
+                <div class="timer-div">
+                    <img class=" stop-watch-img" src="assets/images/stopwatch.svg" alt="Stopwatch">
+                    <span class="time-left">10s</span>
+                </div>
             </div>
-        </div>
-        <div id="container">
+        </header>
+        <section id="container">
+            <h2>Quiz Questions</h2>
             <!-- questions and options will be displayed here -->
-        </div>
+        </section>
         <button id="next-button">Next</button>
+    </main>
 
-    </div>
-    <div class="score-container hide">
-
-        <div id="user-score">Demo Score</div>
+    <section class="score-container hide">
+        <h3 id="user-score">Demo Score</h3>
         <button id="restart">↩️ Restart</button>
-
         <button id="highScore"> 🏆 High scores </button>
-    </div>
+    </section>
 
+    <footer id="contact" class="footer-box">
+        <a id="twitter" href="https://twitter.com/"> </a>
+        <a id="instagram" href="https://www.instagram.com"> </a>
+        <a id="facebook" href="https://www.facebook.com"> </a>
+    </footer>
 
-    <div id="contact" class="footer-box">
-        <a id="twitter" href="#"> </a>
-        <a id="instagram" href="#"> </a>
-        <a id="facebook" href="#"> </a>
-    </div>
+    <!--MODALS BEGIN-->
+    <!-- Modal content here -->
+    <!--MODALS END-->
 
-    <div class="high-score-modal">
-
-        <div id="modal-top">🏆 High scores</div>
-        <span class="closeScore">&times;</span>
-
-        <div id="modal-container">
-            <div id="leaderboard"></div>
-            <div id="external">
-
-                <button id="openContact" class="play">✉️ contact </button>
-            </div>
-            <a href="./index.html" title="Play" class="play">↩️ restart</a>
-        </div>
-
-    </div>
-
-
-    <div id="contactModal">
-
-        <div id="contact-top"> ✉️ contact </div>
-        <span class="closeContact">&times;</span>
-
-        <div id="contact-container">
-            <input class="input" type="text" name="name" id="name" placeholder="Name">
-            <input class="input" type="text" name="Email" id="email" placeholder="Email Address">
-            <textarea name="Message" id="Message" cols="20" rows="4" placeholder="Message"></textarea>
-            <button class="play" id="submit">submit</button>
-
-        </div>
-
-    </div>
-
+    <audio id="correct-audio" src="assets/correct.mp3"></audio>
+    <audio id="incorrect-audio" src="assets/incorrect.mp3"></audio>
     <script src="assets/js/script.js"></script>
-
-    <script>
-        function displayLeaderboard() {
-            // Retrieve leaderboard data from storage
-            let leaderboardData = JSON.parse(localStorage.getItem('leaderboard')) || [];
-            leaderboardData.sort((a, b) => b.score - a.score);
-            const bestRecords = leaderboardData.slice(0, 3)
-
-            // Get the leaderboard table body element
-            let leaderboardTableBody = document.getElementById("leaderboard");
-
-            // Clear existing rows in the leaderboard table
-            leaderboardTableBody.innerHTML = '';
-
-            let levels = ["🥇", "🥈", "🥉"];
-
-            // Loop through the leaderboard data and create table rows
-            bestRecords.forEach((entry, index) => {
-                let row = `<div class="scores">
-                    <div class="icon">${levels[index]}</div>
-                    <div class="points">${entry.name} - ${entry.score} points</div>
-                </div>`;
-                leaderboardTableBody.innerHTML += row;
-            });
-        }
-
-        displayLeaderboard();
-    </script>
-
 </body>
 
 </html>
+
 
 
 
