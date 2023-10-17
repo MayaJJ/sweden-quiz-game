@@ -272,10 +272,13 @@ function initial() {
   quizDisplay(questionCount);
 }
 
+
 function updateHref(e) {
-  var startDisplayContainer = document.getElementById(
-    "start-display-container"
-  );
+  let err = document.getElementById("usernameErr");
+  if (user.value) {
+    var startDisplayContainer = document.getElementById(
+      "start-display-container"
+    );
   // document.location.href = "index.html?user=" + encodeURIComponent(inputValue);
   startDisplayContainer.classList.add("displayNone");
   if (startDisplayContainer.classList.contains("displayNone")) {
