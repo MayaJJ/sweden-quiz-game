@@ -1,28 +1,28 @@
 //References
-let timeLeft = document.querySelector(".time-left");
-let quizContainer = document.getElementById("container");
-let nextBtn = document.getElementById("next-button");
-let countOfQuestion = document.querySelector(".number-of-question");
-let displayContainer = document.getElementById("display-container");
-let scoreContainer = document.querySelector(".score-container");
-let restart = document.getElementById("restart");
-let userScore = document.getElementById("user-score");
-let contactSubmit = document.getElementById("submit");
+var timeLeft = document.querySelector(".time-left");
+var quizContainer = document.getElementById("container");
+var nextBtn = document.getElementById("next-button");
+var countOfQuestion = document.querySelector(".number-of-question");
+var displayContainer = document.getElementById("display-container");
+var scoreContainer = document.querySelector(".score-container");
+var restart = document.getElementById("restart");
+var userScore = document.getElementById("user-score");
+var contactSubmit = document.getElementById("submit");
 
-let highScore = document.getElementById("highScore");
-let openContact = document.getElementById("openContact");
-let contactModal = document.getElementById("contactModal");
-let highScoreModal = document.querySelector(".high-score-modal");
-let closeScore = document.querySelector(".closeScore");
-let closeContact = document.querySelector(".closeContact");
-let emailAlert = document.querySelector("#email-success-alert");
-let closeEmailAlert = document.querySelector(".close-alert");
-let questionCount;
-let scoreCount = 0;
-let count = 11;
-let countdown;
-let user = document.getElementById("userName");
-const quizArray = [
+var highScore = document.getElementById("highScore");
+var openContact = document.getElementById("openContact");
+var contactModal = document.getElementById("contactModal");
+var highScoreModal = document.querySelector(".high-score-modal");
+var closeScore = document.querySelector(".closeScore");
+var closeContact = document.querySelector(".closeContact");
+var emailAlert = document.querySelector("#email-success-alert");
+var closeEmailAlert = document.querySelector(".close-alert");
+var questionCount;
+var scoreCount = 0;
+var count = 11;
+var countdown;
+var user = document.getElementById("userName");
+var quizArray = [
   {
     id: "0",
     question: "What is the capital of Sweden?",
@@ -112,42 +112,50 @@ const quizArray = [
 //Questions and Options array
 
 function welcomeUser() {
-  let hiUser = document.getElementById("hiUser");
+  var hiUser = document.getElementById("hiUser");
   hiUser.innerHTML = "hi, " + user.value;
 }
 function displayLeaderboard() {
   // Retrieve leaderboard data from storage
-  let leaderboardData = JSON.parse(localStorage.getItem("leaderboard")) || [];
-  leaderboardData.sort((a, b) => b.score - a.score);
-  const bestRecords = leaderboardData.slice(0, 3);
+  var leaderboardData = JSON.parse(localStorage.getItem("leaderboard")) || [];
+  leaderboardData.sort(function (a, b) {
+    return b.score - a.score;
+  });
+  var bestRecords = leaderboardData.slice(0, 3);
 
   // Get the leaderboard table body element
-  let leaderboardTableBody = document.getElementById("leaderboard");
+  var leaderboardTableBody = document.getElementById("leaderboard");
 
   // Clear existing rows in the leaderboard table
   leaderboardTableBody.innerHTML = "";
 
-  let levels = ["🥇", "🥈", "🥉"];
-
+  var levels = ["🥇", "🥈", "🥉"];
+  console.log(bestRecords);
   //   // Loop through the leaderboard data and create table rows
-  bestRecords.forEach((entry, index) => {
-    let row = `<div class = "scores">
-            <div class="icon">${levels[index]}</div>
-            <div class="points">${entry.name} - ${entry.score} points</div> 
-          </div>`;
+  bestRecords.forEach(function (entry, index) {
+    var row =
+      '<div class = "scores"><div class="icon">' +
+      levels[index] +
+      '</div><div class="points">' +
+      entry.name +
+      " - " +
+      entry.score +
+      " points</div> </div>";
     leaderboardTableBody.innerHTML += row;
   });
 }
 
 function addScoreToLeaderboard(name, score) {
   // Retrieve leaderboard data from storage (if any)
-  let leaderboardData = JSON.parse(localStorage.getItem("leaderboard")) || [];
+  var leaderboardData = JSON.parse(localStorage.getItem("leaderboard")) || [];
 
   // Add the new score entry to the leaderboard data
-  leaderboardData.push({ name, score });
+  leaderboardData.push({ name: name, score: score });
 
   // Sort the leaderboard data based on scores (descending order)
-  leaderboardData.sort((a, b) => b.score - a.score);
+  leaderboardData.sort(function (a, b) {
+    return b.score - a.score;
+  });
 
   // Store the updated leaderboard data back to storage
   localStorage.setItem("leaderboard", JSON.stringify(leaderboardData));
@@ -155,56 +163,71 @@ function addScoreToLeaderboard(name, score) {
 }
 
 //Timer
-const timerDisplay = () => {
-  countdown = setInterval(() => {
+function timerDisplay() {
+  countdown = setInterval(function () {
     count--;
-    timeLeft.innerHTML = `${count}s`;
+    timeLeft.innerHTML = count + "s";
     if (count == 0) {
-      clearInterval(countdown);
+      return clearInterval(countdown);
     }
   }, 1000);
-};
+}
 
 //Display quiz
-const quizDisplay = (questionCount) => {
-  let quizCards = document.querySelectorAll(".container-mid");
+function quizDisplay(questionCount) {
+  var quizCards = document.querySelectorAll(".container-mid");
   //Hide other cards
-  quizCards.forEach((card) => {
+  quizCards.forEach(function (card) {
     card.classList.add("hide");
   });
   //display current question card
   quizCards[questionCount].classList.remove("hide");
-};
+}
 
 //Quiz Creation
 function quizCreator() {
   //randomly sort questions
-  quizArray.sort(() => Math.random() - 0.5);
+  quizArray.sort(function () {
+    return Math.random() - 0.5;
+  });
   //generate quiz
-  for (let i of quizArray) {
-    //randomly sort options
-    i.options.sort(() => Math.random() - 0.5);
-    //quiz card creation
-    let div = document.createElement("div");
-    div.classList.add("container-mid", "hide");
-    //question number
-    countOfQuestion.innerHTML = 1 + " of " + quizArray.length + " Question";
-    //question
-    let question_DIV = document.createElement("p");
-    question_DIV.classList.add("question");
-    question_DIV.innerHTML = i.question;
+  for (var i = 0; i < quizArray.length; i++) {
+    // Randomly sort options
+    quizArray[i].options.sort(function () {
+      return Math.random() - 0.5;
+    });
+
+    // Quiz card creation
+    var div = document.createElement("div");
+    div.className = "container-mid hide";
+
+    // Question number
+    countOfQuestion.innerHTML = i + 1 + " of " + quizArray.length + " Question";
+
+    // Question
+    var question_DIV = document.createElement("p");
+    question_DIV.className = "question";
+    question_DIV.innerHTML = quizArray[i].question;
     div.appendChild(question_DIV);
-    //options
-    div.innerHTML += `
-      <button class="option-div" onclick="checker(this)">${i.options[0]}</button>
-       <button class="option-div" onclick="checker(this)">${i.options[1]}</button>
-        <button class="option-div" onclick="checker(this)">${i.options[2]}</button>
-         <button class="option-div" onclick="checker(this)">${i.options[3]}</button>
-      `;
+
+    // Options
+    div.innerHTML +=
+      '<button class="option-div" onclick="checker(this)">' +
+      quizArray[i].options[0] +
+      "</button>" +
+      '<button class="option-div" onclick="checker(this)">' +
+      quizArray[i].options[1] +
+      "</button>" +
+      '<button class="option-div" onclick="checker(this)">' +
+      quizArray[i].options[2] +
+      "</button>" +
+      '<button class="option-div" onclick="checker(this)">' +
+      quizArray[i].options[3] +
+      "</button>";
+
     quizContainer.appendChild(div);
   }
 }
-
 //Checker Function to check if option is correct or not
 function checker(userOption) {
   let userSolution = userOption.innerText;
@@ -233,8 +256,8 @@ function checker(userOption) {
   //clear interval(stop timer)
   clearInterval(countdown);
   //disable all options
-  options.forEach((element) => {
-    element.disabled = true;
+  options.forEach(function (element) {
+    return (element.disabled = true);
   });
 }
 //initial setup
@@ -250,40 +273,32 @@ function initial() {
 }
 
 function updateHref(e) {
-  let err = document.getElementById("usernameErr");
-  if (user.value) {
-    var startDisplayContainer = document.getElementById(
-      "start-display-container"
-    );
-    // document.location.href = "index.html?user=" + encodeURIComponent(inputValue);
-    startDisplayContainer.classList.add("displayNone");
-    if (startDisplayContainer.classList.contains("displayNone")) {
-      initial();
-      welcomeUser();
-    }
-    err.innerHTML = "";
-    err.style.display = "none";
-  } else {
-    err.innerHTML = "Username field is required.";
-    err.style.display = "block";
+  var startDisplayContainer = document.getElementById(
+    "start-display-container"
+  );
+  // document.location.href = "index.html?user=" + encodeURIComponent(inputValue);
+  startDisplayContainer.classList.add("displayNone");
+  if (startDisplayContainer.classList.contains("displayNone")) {
+    initial();
+    welcomeUser();
   }
 }
-const closeContactModal = () => {
+function closeContactModal() {
   contactModal.style.display = "none";
-};
-const closeEmailAlertModal = () => {
+}
+function closeEmailAlertModal() {
   emailAlert.style.display = "none";
-};
-const openEmailAlertModal = () => {
+}
+function openEmailAlertModal() {
   emailAlert.style.display = "flex";
-};
+}
 //Restart Quiz
-restart.addEventListener("click", () => {
+restart.addEventListener("click", function () {
   window.location.href = "./index.html";
 });
 
 //Next Button
-nextBtn.addEventListener("click", () => {
+nextBtn.addEventListener("click", function () {
   //increment questionCount
   questionCount += 1;
   //if last question
@@ -308,27 +323,26 @@ nextBtn.addEventListener("click", () => {
   }
 });
 
-highScore.addEventListener("click", () => {
+highScore.addEventListener("click", function () {
   highScoreModal.style.display = "block";
 });
 
-closeScore.addEventListener("click", () => {
+closeScore.addEventListener("click", function () {
   highScoreModal.style.display = "none";
 });
 
-openContact.addEventListener("click", () => {
+openContact.addEventListener("click", function () {
   contactModal.style.display = "block";
   highScoreModal.style.display = "none";
 });
 
-closeContact.addEventListener("click", () => {
+closeContact.addEventListener("click", function () {
   closeContactModal();
 });
-contactSubmit.addEventListener("click", () => {
+contactSubmit.addEventListener("click", function () {
   closeContactModal();
   openEmailAlertModal();
 });
-closeEmailAlert.addEventListener("click", () => {
+closeEmailAlert.addEventListener("click", function () {
   closeEmailAlertModal();
 });
-
