@@ -8,7 +8,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Sweden Quiz</title>
+    <title>Quiz App using JavaScript - @code.scientist x @codingtorque</title>
 </head>
 
 <body>
@@ -19,7 +19,7 @@
         <button id="play-button" type="submit" class="play" onclick="updateHref()">play</button>
     </div>
 
-    <div id="top">Sweden Quiz 🇸🇪</div>
+    <div id="top">Sweden Quiz Game 🇸🇪</div>
     <!-- Further code here -->
     <div class="start-screen">
         <button id="start-button">Start</button>
@@ -35,13 +35,12 @@
                 <div id="score"></div>
 
                 <div class="timer-div">
-                    <img class=" stop-watch-img" src="assets/images/stopwatch.svg" alt="Stopwatch">
+                    <img class="stopwatch-img" src="assets/images/stopwatch.svg" alt="Stopwatch">
                     <span class="time-left">10s</span>
                 </div>
             </div>
         </header>
         <section id="container">
-            <h2>Quiz Questions</h2>
             <!-- questions and options will be displayed here -->
         </section>
         <button id="next-button">Next</button>
@@ -53,6 +52,7 @@
         <button id="highScore"> 🏆 High scores </button>
     </section>
 
+
     <footer id="contact" class="footer-box">
         <a id="twitter" href="https://twitter.com/"> </a>
         <a id="instagram" href="https://www.instagram.com"> </a>
@@ -60,9 +60,34 @@
     </footer>
 
     <!--MODALS BEGIN-->
-    <!-- Modal content here -->
-    <!--MODALS END-->
+    <div class="high-score-modal">
+        <span class="closeScore">&times;</span>
+        <div id="modal-top">🏆 High scores</div>
+        <div id="modal-container">
+            <div id="leaderboard"></div>
+            <div id="external">
+                <button id="openContact" class="play">✉️ contact </button>
+                <a title="Play" class="play" href="./index.html">↩️ restart</a>
+            </div>
+        </div>
+    </div>
 
+    <div id="contactModal">
+        <div id="contact-top"> ✉️ contact </div>
+        <span class="closeContact">&times;</span>
+        <div id="contact-container">
+            <input class="input" type="text" name="name" id="name" placeholder="Name">
+            <input class="input" type="text" name="Email" id="email" placeholder="Email Address">
+            <textarea name="Message" id="Message" cols="20" rows="4" placeholder="Messagge"></textarea>
+            <button class="play" id="submit">submit</button>
+        </div>
+    </div>
+
+    <div id="email-success-alert" style="display: none;">
+        <span class="close-alert">&times;</span>
+        <div class="message">Email sent successfully!</div>
+    </div>
+    <!--MODALS END-->
     <audio id="correct-audio" src="assets/correct.mp3"></audio>
     <audio id="incorrect-audio" src="assets/incorrect.mp3"></audio>
     <script src="assets/js/script.js"></script>
