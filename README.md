@@ -1,6 +1,6 @@
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-# Sweden Quiz
+# Sweden Quiz Game
 
 Welcome to the Sweden Quiz Game App, a fun and educational game that tests your knowledge about Sweden. Whether you're a history buff, a travel enthusiast, or simply curious about Sweden, this app is designed to challenge and entertain you.
 
@@ -97,7 +97,7 @@ No bugs to fix
 The site was deployed to GitHub pages. The steps to deploy are as follows:
 In the GitHub repository, navigate to the settings tab.
 From the source section drop-down menu, select the master Branch.
-Once the master branch has been selected, the page provided the link to the completed website [Sweden Quiz Game](https://mayajj.github.io/quizgame/)
+Once the master branch has been selected, the page provided the link to the completed website [Sweden Quiz Game](https://mayajj.github.io/sweden-quiz-game/)
 
 ## Credits:
 
