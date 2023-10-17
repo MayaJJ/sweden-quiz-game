@@ -130,7 +130,7 @@ function displayLeaderboard() {
   leaderboardTableBody.innerHTML = "";
 
   var levels = ["🥇", "🥈", "🥉"];
-  console.log(bestRecords);
+
   //   // Loop through the leaderboard data and create table rows
   bestRecords.forEach(function (entry, index) {
     var row =
@@ -168,7 +168,7 @@ function timerDisplay() {
     count--;
     timeLeft.innerHTML = count + "s";
     if (count == 0) {
-      return clearInterval(countdown);
+      clearInterval(countdown);
     }
   }, 1000);
 }
@@ -228,13 +228,14 @@ function quizCreator() {
     quizContainer.appendChild(div);
   }
 }
+
 //Checker Function to check if option is correct or not
 function checker(userOption) {
-  let userSolution = userOption.innerText;
-  let scoreText = document.getElementById("score");
-  let question =
+  var userSolution = userOption.innerText;
+  var scoreText = document.getElementById("score");
+  var question =
     document.getElementsByClassName("container-mid")[questionCount];
-  let options = question.querySelectorAll(".option-div");
+  var options = question.querySelectorAll(".option-div");
 
   //if user clicked answer == correct option stored in object
   if (userSolution === quizArray[questionCount].correct) {
@@ -246,7 +247,7 @@ function checker(userOption) {
     document.getElementById("incorrect-audio").play();
     userOption.classList.add("incorrect");
     //For marking the correct option
-    options.forEach((element) => {
+    options.forEach(function (element) {
       if (element.innerText == quizArray[questionCount].correct) {
         element.classList.add("correct");
       }
@@ -257,7 +258,7 @@ function checker(userOption) {
   clearInterval(countdown);
   //disable all options
   options.forEach(function (element) {
-    return (element.disabled = true);
+    element.disabled = true;
   });
 }
 //initial setup
@@ -272,18 +273,23 @@ function initial() {
   quizDisplay(questionCount);
 }
 
-
 function updateHref(e) {
-  let err = document.getElementById("usernameErr");
+  var err = document.getElementById("usernameErr");
   if (user.value) {
     var startDisplayContainer = document.getElementById(
       "start-display-container"
     );
-  // document.location.href = "index.html?user=" + encodeURIComponent(inputValue);
-  startDisplayContainer.classList.add("displayNone");
-  if (startDisplayContainer.classList.contains("displayNone")) {
-    initial();
-    welcomeUser();
+    // document.location.href = "index.html?user=" + encodeURIComponent(inputValue);
+    startDisplayContainer.classList.add("displayNone");
+    if (startDisplayContainer.classList.contains("displayNone")) {
+      initial();
+      welcomeUser();
+    }
+    err.innerHTML = "";
+    err.style.display = "none";
+  } else {
+    err.innerHTML = "Username field is required.";
+    err.style.display = "block";
   }
 }
 function closeContactModal() {
